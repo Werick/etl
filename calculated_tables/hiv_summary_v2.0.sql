@@ -81,15 +81,14 @@ create table if not exists flat_hiv_summary (
 
 	condoms_provided int,
 	using_modern_contraceptive_method int,
+	#Current WHO Stage 5356
+	cur_who_stage int,
 	prev_encounter_datetime_hiv datetime,
 	next_encounter_datetime_hiv datetime,
 	prev_encounter_type_hiv mediumint,
 	next_encounter_type_hiv mediumint,
 	prev_clinical_datetime_hiv_ datetime,
 	next_clinical_datetime_hiv datetime,
-
-	#Current WHO Stage 5356
-	cur_who_stage int,
 
     primary key encounter_id (encounter_id),
     index person_date (person_id, encounter_datetime),
